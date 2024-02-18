@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form novalidate action="{% url 'productos:formulario' %}" method ='post'>
+    {% csrf_token %} <!-- es un input que se utiliza como metodo de seguridad, ponerlo SI O SI-->
+    {{ form }}
+    <input type="submit" value="Enviar"/>
+</form>
+
+{% endblock %} 
